@@ -51,7 +51,7 @@ on:
     branches: [ "master" ]
 
 env:
-  PROJECT_ID: 	channelnest # TODO: update Google Cloud project id
+  PROJECT_ID: ${{ secrets.GCP_PROJECT }} # TODO: update Google Cloud project id
   SERVICE: cicd_pipline # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
