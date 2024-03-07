@@ -1,10 +1,13 @@
 const express = require("express")
+require('dotenv').config()
+
 
 const app = express();
 
 
-app.get('/hi', function (req, res) {
-  res.send("Ankit's server hi")
+app.get('/test', function (req, res) {
+  const envValues = process.env.TEST_ENV
+  res.send(`The test Env = ${envValues}`)
 })
 
 app.get('/', function (req, res) {
